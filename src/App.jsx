@@ -19,7 +19,7 @@ function App() {
   );
   const [error, setError] = useState(false);
   const [isValidPresupuesto, setIsValidPresupuesto] = useState(
-    JSON.parse(localStorage.getItem('gastosLista')).length > 0 ||
+    (JSON.parse(localStorage.getItem('gastosLista'))|| []).length > 0 ||
       JSON.parse(localStorage.getItem('presupuesto')) !== ''
       ? true
       : false
