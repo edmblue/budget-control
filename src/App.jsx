@@ -18,10 +18,8 @@ function App() {
     JSON.parse(localStorage.getItem('presupuesto')) || ''
   );
   const [error, setError] = useState(false);
-   const [isValidPresupuesto, setIsValidPresupuesto] = useState(
-    (JSON.parse(localStorage.getItem('gastosLista')) || []).length > 0
-      ? true
-      : false
+  const [isValidPresupuesto, setIsValidPresupuesto] = useState(
+    presupuesto > 0 ? true : false
   );
   const [gastosLista, setGastosLista] = useState(
     JSON.parse(localStorage.getItem('gastosLista')) || []
